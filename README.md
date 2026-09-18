@@ -12,7 +12,7 @@ Repository: https://github.com/Ziyadin23/vehicle-factory-assignment
 - [Factory Method UML](docs/factory-method.png) and [Abstract Factory UML](docs/abstract-factory.png)
 - [Demo output](docs/demo-output.txt) and [test results](docs/test-output.txt)
 
-Fill in your name and group before submission. This repository is private: grant your
+Student: Ziyadinkhan Kudaibergenuly, SE2501. This repository is private: grant your
 instructor access or change visibility according to course instructions. Submit the
 report and repository link to Moodle separately.
 

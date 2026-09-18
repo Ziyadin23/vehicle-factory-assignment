@@ -72,6 +72,6 @@ powershell -ExecutionPolicy Bypass -File .\run.ps1 -Mode test
 - Run both commands once; keep docs/demo-output.txt as a fallback record.
 - Open both UML diagrams, the report and GitHub repository.
 - Know your repository URL and the purpose of each package.
-- Fill in your name and group, review the report, and follow the institution's disclosure rules.
+- Check your name and group, review the report, and follow the institution's disclosure rules.
 - Confirm exact Week 2 and Week 3 dates on Moodle; the supplied assignment gives no calendar dates.
 - Upload the report and repository link to Moodle before the specified deadline. GitHub upload does not submit to Moodle.

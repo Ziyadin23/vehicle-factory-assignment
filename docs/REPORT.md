@@ -1,9 +1,9 @@
 # RideReady: Factory Method and Abstract Factory
 Assignment 2 | ShP-2216 — Software Design Patterns | Astana IT University
 
-Student: [enter your full name]
+Student: Ziyadinkhan Kudaibergenuly
 
-Group: [enter your group]
+Group: SE2501
 
 Repository: https://github.com/Ziyadin23/vehicle-factory-assignment
 
@@ -122,4 +122,4 @@ Choose Factory Method when a workflow needs one product abstraction and subclass
 - Martin, R. C. Clean Code (2008), Chapter 6 (assigned course reference).
 - The course's Lecture 2 and Moodle reading should be reviewed before the defense; those materials were not supplied here.
 
-Preparation disclosure: this project and report were developed with AI assistance. Review, adapt, and disclose assistance as required by the course. Student identity must be filled in by the student; this draft does not claim unaided authorship.
+Preparation disclosure: this project and report were developed with AI assistance. Review, adapt, and disclose assistance as required by the course. This report does not claim unaided authorship.

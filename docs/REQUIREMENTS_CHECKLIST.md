@@ -15,5 +15,5 @@
 | GitHub URL | https://github.com/Ziyadin23/vehicle-factory-assignment (private; grant instructor access) |
 | Incremental history | Separate commits for scaffold, Part A, Part B, tests and documentation |
 | Demo and instructor preparation | PREPARATION_GUIDE.md and recorded console output |
-| Personal details | Student must fill in name and group |
+| Personal details | Ziyadinkhan Kudaibergenuly, SE2501 |
 | Moodle submission | Student action; GitHub upload is separate |
