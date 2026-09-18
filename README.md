@@ -6,8 +6,8 @@ Topic: vehicle rentals and compatible accessory families (Option B).
 Repository: https://github.com/Ziyadin23/vehicle-factory-assignment
 
 ## Submission and study files
-- [Report (PDF)](docs/REPORT.pdf) and [editable Word report](docs/REPORT.docx)
-- [Defense preparation guide (PDF)](docs/PREPARATION_GUIDE.pdf) and [Markdown guide](docs/PREPARATION_GUIDE.md)
+- [Report (PDF)](docs/REPORT.pdf)
+- [Defense preparation guide (PDF)](docs/PREPARATION_GUIDE.pdf)
 - [Requirements checklist](docs/REQUIREMENTS_CHECKLIST.md)
 - [Factory Method UML](docs/factory-method.png) and [Abstract Factory UML](docs/abstract-factory.png)
 - [Demo output](docs/demo-output.txt) and [test results](docs/test-output.txt)
@@ -43,9 +43,6 @@ it selects and connects implementations explicitly, with no type-selection switc
 The application is a teaching simulation, not a real rental, pricing, or safety system.
 Review and adapt the work according to your course's individual-work and AI-use rules.
 
-## Regenerating documents
-Edit docs/REPORT.md or docs/PREPARATION_GUIDE.md, then run
-`powershell -ExecutionPolicy Bypass -File .\scripts\export-documents.ps1` on Windows
-with Microsoft Word installed. The script produces HTML, DOCX and PDF files.
+## Regenerating UML diagrams
 UML sources are editable PlantUML files; render them with PlantUML's Smetana layout
 (`java -jar plantuml.jar -Playout=smetana -tpng docs/*.puml`).
