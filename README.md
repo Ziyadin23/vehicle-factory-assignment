@@ -8,6 +8,7 @@ Repository: https://github.com/Ziyadin23/vehicle-factory-assignment
 ## Submission and study files
 - [Report (PDF)](docs/REPORT.pdf)
 - [Defense preparation guide (PDF)](docs/PREPARATION_GUIDE.pdf)
+- [Design patterns concepts and foundations (PDF)](docs/DESIGN_PATTERNS_BASICS.pdf)
 - [Requirements checklist](docs/REQUIREMENTS_CHECKLIST.md)
 - [Factory Method UML](docs/factory-method.png) and [Abstract Factory UML](docs/abstract-factory.png)
 - [Demo output](docs/demo-output.txt) and [test results](docs/test-output.txt)
@@ -16,15 +17,16 @@ Student: Ziyadinkhan Kudaibergenuly, SE2501. This repository is private: grant y
 instructor access or change visibility according to course instructions. Submit the
 report and repository link to Moodle separately.
 
-## Run
-Install JDK 17 or newer, then from this folder:
-```powershell
-powershell -ExecutionPolicy Bypass -File .\run.ps1
-powershell -ExecutionPolicy Bypass -File .\run.ps1 -Mode test
-```
-The Windows script also detects the portable JDK in the adjacent VehicleFactoryTools folder.
-On macOS/Linux, with Java on PATH: `sh run.sh` or `sh run.sh test`.
-In IntelliJ: open this folder, select JDK 17, mark src/main/java as Sources Root and src/test/java as Test Sources Root, then run Main or PatternTests.
+## Run in VS Code
+1. Open the entire project folder in VS Code with the Extension Pack for Java installed.
+2. Use **Java: Configure Java Runtime** from the Command Palette to select JDK 17 for this project.
+3. Open `src/main/java/rideready/Main.java` and click **Run** above `main()` to run the demo.
+4. Open `src/test/java/rideready/PatternTests.java` and click **Run** above `main()` to run the 16 behavioral checks.
+
+The included VS Code settings identify both Java source folders. PatternTests is a standalone
+Java program, so run its main method directly. No build scripts or external Java libraries are needed.
+See the [official VS Code Java guide](https://code.visualstudio.com/docs/java/java-project)
+for runtime configuration.
 
 ## Structure
 - src/main/java/rideready/factorymethod: Vehicle products and VehicleFactory creators.
