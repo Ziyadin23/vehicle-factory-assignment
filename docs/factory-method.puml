@@ -1,0 +1,23 @@
+@startuml
+title RideReady - Part A: Factory Method
+skinparam classAttributeIconSize 0
+interface Vehicle {
+  +description(): String
+  +wheels(): int
+}
+class Motorcycle
+class Car
+abstract class VehicleFactory {
+  {abstract} +createVehicle(): Vehicle
+  +prepareRental(): String
+}
+class MotorcycleFactory
+class CarFactory
+Vehicle <|.. Motorcycle
+Vehicle <|.. Car
+VehicleFactory <|-- MotorcycleFactory
+VehicleFactory <|-- CarFactory
+VehicleFactory ..> Vehicle : uses
+MotorcycleFactory ..> Motorcycle : creates
+CarFactory ..> Car : creates
+@enduml

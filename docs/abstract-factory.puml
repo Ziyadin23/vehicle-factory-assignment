@@ -1,0 +1,41 @@
+@startuml
+title RideReady - Part B: Abstract Factory
+skinparam classAttributeIconSize 0
+interface AccessoryFactory {
+  +createSafetyEquipment(): SafetyEquipment
+  +createSecurityDevice(): SecurityDevice
+}
+interface SafetyEquipment {
+  +category(): VehicleCategory
+  +description(): String
+}
+interface SecurityDevice {
+  +category(): VehicleCategory
+  +description(): String
+}
+class MotorcycleAccessoryFactory
+class CarAccessoryFactory
+class Helmet
+class ChildSeat
+class DiscLock
+class CarAlarm
+class AccessoryRental {
+  -safety: SafetyEquipment
+  -security: SecurityDevice
+  +AccessoryRental(factory: AccessoryFactory)
+  +summary(): String
+}
+AccessoryFactory <|.. MotorcycleAccessoryFactory
+AccessoryFactory <|.. CarAccessoryFactory
+SafetyEquipment <|.. Helmet
+SafetyEquipment <|.. ChildSeat
+SecurityDevice <|.. DiscLock
+SecurityDevice <|.. CarAlarm
+MotorcycleAccessoryFactory ..> Helmet : creates
+MotorcycleAccessoryFactory ..> DiscLock : creates
+CarAccessoryFactory ..> ChildSeat : creates
+CarAccessoryFactory ..> CarAlarm : creates
+AccessoryRental ..> AccessoryFactory : constructor parameter
+AccessoryRental --> SafetyEquipment : safety
+AccessoryRental --> SecurityDevice : security
+@enduml

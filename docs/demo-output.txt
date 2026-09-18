@@ -1,0 +1,9 @@
+RideReady | Factory Method & Abstract Factory
+
+Motorcycle rental
+  Part A - Ready: Motorcycle (2 wheels)
+  Part B - Motorcycle helmet + Motorcycle disc lock
+
+Car rental
+  Part A - Ready: Car (4 wheels)
+  Part B - Car child seat + Car alarm

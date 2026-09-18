@@ -1,0 +1,55 @@
+<!doctype html><html><head><meta charset="utf-8"><style>body{font-family:Calibri,Arial,sans-serif;font-size:11pt;color:#182635}h1{font-size:22pt;color:#17365d}h2{font-size:15pt;color:#17365d;margin-top:20pt}h3{font-size:12pt;color:#17365d}p{line-height:1.15;margin:7pt 0}pre{font-family:Consolas,monospace;font-size:9pt;background:#f1f4f8;white-space:pre-wrap}code{font-family:Consolas,monospace}img{max-width:620px}h1,h2,h3{page-break-after:avoid}</style></head><body>
+<h1>Defense preparation &#8212; RideReady</h1>
+<h2>Start here</h2>
+<p>The defense is 50% of the assignment grade. Be able to explain and modify the program without reading a script. Review the source and adapt the report to your own understanding. Confirm the course&#39;s rules on AI assistance before submission.</p>
+<h2>60-minute preparation plan</h2>
+<p>1. 10 minutes: run the demo and read Main, VehicleFactory, MotorcycleFactory and Vehicle.</p>
+<p>2. 15 minutes: draw the Factory Method UML from memory and trace prepareRental().</p>
+<p>3. 15 minutes: read AccessoryFactory and AccessoryRental; explain every dependency in the second diagram.</p>
+<p>4. 10 minutes: run the tests and deliberately explain the mixed-family failure.</p>
+<p>5. 10 minutes: rehearse the demonstration and answer the questions below aloud.</p>
+<h2>Five-minute demonstration script</h2>
+<p>- 0:00&#8211;0:30: &#8220;My topic is vehicle rentals. I create one vehicle with Factory Method, then a consistent accessory pair with Abstract Factory.&#8221;</p>
+<p>- 0:30&#8211;1:30: Show Vehicle, VehicleFactory and both concrete creators. Follow prepareRental() into the overridden createVehicle().</p>
+<p>- 1:30&#8211;2:30: Show the two accessory product interfaces and factories. Explain the helmet/lock and child-seat/alarm families.</p>
+<p>- 2:30&#8211;3:15: Show AccessoryRental. Point out interface dependencies, final fields and construction validation. Explain Main&#39;s composition-root role.</p>
+<p>- 3:15&#8211;4:00: Run the demo and tests. Explain both categories and the invalid-factory tests.</p>
+<p>- 4:00&#8211;5:00: Use the UML to compare the patterns, state a tradeoff, and describe how to add a bicycle family.</p>
+<p>Commands from the project directory:</p>
+<pre>
+powershell -ExecutionPolicy Bypass -File .\run.ps1
+powershell -ExecutionPolicy Bypass -File .\run.ps1 -Mode test
+</pre>
+<h2>Questions and concise answers</h2>
+<p><b>What is the Product in Part A?</b> Vehicle. Motorcycle and Car are concrete products.</p>
+<p><b>Where is the factory method?</b> VehicleFactory.createVehicle(). Each concrete creator overrides it; prepareRental() calls it.</p>
+<p><b>Why isn&#39;t this just a Simple Factory?</b> A Simple Factory commonly centralizes selection in a method with a parameter and branches. Here subclasses override creation, and the inherited workflow uses dynamic dispatch.</p>
+<p><b>Why have prepareRental()?</b> It shows the purpose of the Creator: reusable behavior that consumes the product abstraction and delegates only creation.</p>
+<p><b>What is the family in Part B?</b> A safety product and a security product for one vehicle category. Motorcycle means Helmet plus DiscLock; car means ChildSeat plus CarAlarm.</p>
+<p><b>Who is the Abstract Factory client?</b> AccessoryRental. It receives AccessoryFactory and only uses SafetyEquipment and SecurityDevice.</p>
+<p><b>Main constructs concrete factories. Is that wrong?</b> No. An application needs a place to choose implementations. Main is that composition root. The reusable client does not make those choices.</p>
+<p><b>Does the validation if violate the assignment?</b> No. It validates matching family identifiers; it does not select or instantiate concrete products.</p>
+<p><b>What is the distinction between the patterns?</b> Factory Method delegates creation of a product to subclasses through an overridable method. Abstract Factory supplies a family through an injected factory object with multiple creation methods.</p>
+<p><b>Can they be combined?</b> Yes. Abstract Factory implementations can use factory methods internally. Here they demonstrate related creation decisions in separate parts.</p>
+<p><b>How would you add a bicycle?</b> Implement Bicycle and BicycleFactory. For accessories, add BICYCLE to VehicleCategory, implement both accessory interfaces, implement BicycleAccessoryFactory, and wire the pair in Main. Neither existing workflow nor client needs a type-selection branch.</p>
+<p><b>How would you add insurance as a third family product?</b> Add an Insurance interface and concrete family implementations, then add createInsurance() to AccessoryFactory and implement it in every factory. Update the client if it uses insurance. This is Abstract Factory&#39;s product-type extension cost.</p>
+<p><b>Why return interfaces?</b> Callers depend on contracts and can accept alternative implementations. The tests demonstrate substituting a custom safety product.</p>
+<p><b>Why validate a factory that you wrote?</b> A future or third-party implementation could return null or mix families. Validation protects the client invariant.</p>
+<p><b>Do you guarantee a vehicle and accessory family match?</b> Main supplies matching factories, but the model only validates consistency inside an accessory pair. Do not claim stronger compile-time safety.</p>
+<p><b>Which Clean Code principles did you use?</b> Meaningful names, polymorphism, small methods, encapsulation and abstraction, fail-fast validation without duplicated checks, and separation of composition from client behavior. Show the actual excerpts in the report.</p>
+<p><b>Why no database or GUI?</b> Neither is required; the console keeps creation patterns visible and allows a reliable live demonstration.</p>
+<p><b>What did the tests establish?</b> Both workflows and families work, invalid construction fails, and alternative implementations can be substituted. They do not establish production fitness or physical safety.</p>
+<h2>Practice modifications</h2>
+<p>1. Before editing, create a branch. Add Bicycle and BicycleFactory and predict the output.</p>
+<p>2. Make a test factory return Helmet plus CarAlarm. Explain why construction throws.</p>
+<p>3. Replace Helmet with another motorcycle SafetyEquipment implementation. Observe that AccessoryRental is unchanged.</p>
+<p>4. Explain which files change when adding a family versus adding a product type.</p>
+<h2>Defense-day checklist</h2>
+<p>- Bring a working JDK 17 environment and open the project before class.</p>
+<p>- Run both commands once; keep docs/demo-output.txt as a fallback record.</p>
+<p>- Open both UML diagrams, the report and GitHub repository.</p>
+<p>- Know your repository URL and the purpose of each package.</p>
+<p>- Fill in your name and group, review the report, and follow the institution&#39;s disclosure rules.</p>
+<p>- Confirm exact Week 2 and Week 3 dates on Moodle; the supplied assignment gives no calendar dates.</p>
+<p>- Upload the report and repository link to Moodle before the specified deadline. GitHub upload does not submit to Moodle.</p>
+</body></html>

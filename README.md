@@ -1,7 +1,20 @@
-# RideReady вЂ” Factory Method & Abstract Factory
+# RideReady — Factory Method & Abstract Factory
 
 Java 17 console application for Assignment 2, ShP-2216, Astana IT University.
 Topic: vehicle rentals and compatible accessory families (Option B).
+
+Repository: https://github.com/Ziyadin23/vehicle-factory-assignment
+
+## Submission and study files
+- [Report (PDF)](docs/REPORT.pdf) and [editable Word report](docs/REPORT.docx)
+- [Defense preparation guide (PDF)](docs/PREPARATION_GUIDE.pdf) and [Markdown guide](docs/PREPARATION_GUIDE.md)
+- [Requirements checklist](docs/REQUIREMENTS_CHECKLIST.md)
+- [Factory Method UML](docs/factory-method.png) and [Abstract Factory UML](docs/abstract-factory.png)
+- [Demo output](docs/demo-output.txt) and [test results](docs/test-output.txt)
+
+Fill in your name and group before submission. This repository is private: grant your
+instructor access or change visibility according to course instructions. Submit the
+report and repository link to Moodle separately.
 
 ## Run
 Install JDK 17 or newer, then from this folder:
@@ -29,3 +42,10 @@ it selects and connects implementations explicitly, with no type-selection switc
 
 The application is a teaching simulation, not a real rental, pricing, or safety system.
 Review and adapt the work according to your course's individual-work and AI-use rules.
+
+## Regenerating documents
+Edit docs/REPORT.md or docs/PREPARATION_GUIDE.md, then run
+`powershell -ExecutionPolicy Bypass -File .\scripts\export-documents.ps1` on Windows
+with Microsoft Word installed. The script produces HTML, DOCX and PDF files.
+UML sources are editable PlantUML files; render them with PlantUML's Smetana layout
+(`java -jar plantuml.jar -Playout=smetana -tpng docs/*.puml`).

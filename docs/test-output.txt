@@ -1,0 +1,17 @@
+PASS motorcycle contract
+PASS car contract
+PASS motorcycle workflow
+PASS car workflow
+PASS MOTORCYCLE safety family
+PASS MOTORCYCLE security family
+PASS CAR safety family
+PASS CAR security family
+PASS motorcycle client
+PASS car client
+PASS null factory
+PASS null safety
+PASS null security
+PASS mixed families
+PASS creator extension
+PASS interface substitution
+PASS: 16 behavioral checks
